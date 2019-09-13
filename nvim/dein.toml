@@ -25,6 +25,7 @@
     source ~/.config/nvim/plugins/gitgutter.vim
   '''
 
+  # powerful tool for git.
   [[plugins]]
   repo = 'tpope/vim-fugitive'
   hook_add = '''

@@ -1,9 +1,11 @@
   [[plugins]]
   repo = 'Shougo/dein.vim'
 
+  # auto complemation for if sentence, and more
   [[plugins]]
   repo = 'tpope/vim-endwise'
 
+  # auto complemation for (, { and more.lh
   [[plugins]]
   repo = 'Townk/vim-autoclose'
 
@@ -16,6 +18,7 @@
   [[plugins]]
   repo = 'w0rp/ale'
 
+  # high light the lines that are chenged.
   [[plugins]]
   repo = 'airblade/vim-gitgutter'
   hook_add = '''

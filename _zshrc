@@ -1,70 +1,15 @@
-# zplug
-source ~/.zplug/init.zsh
+source $HOME/.zplugin/bin/zplugin.zsh
+autoload -Uz _zplugin
+(( ${+_comps} )) && _comps[zplugin]=_zplugin
 
-# Install plugins if there are plugins that have not been installed
-if ! zplug check --verbose; then
- printf "Install? [y/N]: "
- if read -q; then
-   echo; zplug install
- fi
-fi
-# Then, source plugins and add commands to $PATH
-zplug load
+zplugin light zsh-users/zsh-autosuggestions
+zplugin light zdharma/fast-syntax-highlighting
+zplugin ice pick"async.zsh" src"pure.zsh"; zplugin light sindresorhus/pure
+zplugin light "junegunn/fzf"
+zplugin light supercrabtree/k
+autoload -U compinit
+compinit
 
-############# below my settings for zsh !! ###############
-
-
-####### PROMPT ######################
-# 空白行入れる
-precmd() {
- local left=" "
- local right=" "
- print -P $left${(r:($COLUMNS-${#left}-${#right}):: :)}$right
-}
-# プロンプト本体(秋っぽい)
-PROMPT="%F{178}[%n@%m]%f
-%F{202}%~%(!,#,❯)%(!,#,❯)%f "
-
-####### history #####################
-# 履歴ファイルの保存先
-export HISTFILE=${HOME}/.zsh_history
-
-# メモリに保存される履歴の件数
-export HISTSIZE=1000
-
-# 履歴ファイルに保存される履歴の件数
-export SAVEHIST=100000
-
-# ヒストリに追加されるコマンド行が古いものと同じなら古いものを削除
-setopt hist_ignore_all_dups
-
-# 開始と終了を記録
-setopt EXTENDED_HISTORY
-
-# スペースで始まるコマンド行はヒストリリストから削除
-setopt hist_ignore_space
-
-# 余分な空白は詰めて記録
-setopt hist_reduce_blanks 
-
-# 補完時にヒストリを自動的に展開        
-setopt hist_expand
-
-# インクリメンタルからの検索
-bindkey "^R" history-incremental-search-backward
-bindkey "^S" history-incremental-search-forward
-
-#####################################
-function history-all { history -E 1 }
-
-function cat_make() {
-   HISTORY_DIR=$(pwd)
-   cd ~/catkin_ws
-   catkin_make
-   source ~/catkin_ws/devel/setup.zsh
-   cd $HISTORY_DIR
- }
-alias cat_make=cat_make
 
 # PATH
 PATH=/usr/bin:$PATH
@@ -92,5 +37,13 @@ alias tmux-copy='tmux save-buffer - | pbcopy'
 # neovim
 alias vim='nvim'
 
+# LS_COLOR
+alias ls='ls --color=auto'
 
 
+### Added by Zplugin's installer
+source '/home/toshi/.zplugin/bin/zplugin.zsh'
+autoload -Uz _zplugin
+(( ${+_comps} )) && _comps[zplugin]=_zplugin
+### End of Zplugin installer's chunk
+eval $(dircolors -b $HOME/.dircolors)

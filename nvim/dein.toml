@@ -39,3 +39,16 @@
   hook_add = '''
     source ~/.config/nvim/plugins/anzu.vim
   '''
+  
+  
+  ###### markdown setting ######
+  [[plugins]]
+  repo = 'plasticboy/vim-markdown'
+  hook_add = '''
+    source ~/.config/nvim/plugins/vim-markdown.vim
+  '''
+  [[plugins]]
+  repo = 'kannokanno/previm'
+  [[plugins]]
+  repo = 'tyru/open-browser.vim'
+  ###############################

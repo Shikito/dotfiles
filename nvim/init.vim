@@ -7,7 +7,7 @@ set splitright
 set clipboard=unnamed
 set hls
 
-"----- setup dein -------
+"----- dein -------
 if &compatible
   set nocompatible
 endif
@@ -24,4 +24,4 @@ call dein#install()
 endif
 filetype plugin indent on
 syntax enable
-"----- the end of dein setup --------
+"----- the end of dein -------

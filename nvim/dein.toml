@@ -44,14 +44,19 @@
     source ~/.config/nvim/plugins/anzu.vim
   '''
 
+  [[plugins]]
+  repo = 'tpope/vim-repeat'
+  
+  #----NERDTree ------------#
   [[plugins]] 
   repo = 'scrooloose/nerdtree'
-  
-  # Ctrl+e ---> Open NERDTree
   hook_add = '''
    source ~/.config/nvim/plugins/nerdtree.vim
   '''
-  
+  #-----end of NERDTree-----#
+
+  [[plugins]]
+  repo = 'tpope/vim-surround'
   ###### markdown setting ######
   [[plugins]]
   repo = 'plasticboy/vim-markdown'
@@ -60,14 +65,15 @@
   '''
   [[plugins]]
   repo = 'kannokanno/previm'
-  [[plugins]]
-  repo = 'tyru/open-browser.vim'
   ###############################
 
-  ### Latex
+  #---- Latex --------------#
   [[plugins]]
   repo = 'lervag/vimtex'
+  on_ft = ['tex']
   hook_add = '''
     source ~/.config/nvim/plugins/vimtex.vim
   '''
-  ##########
+  #-------------------------#
+  #----Japanese Input ------#
+  #-------------------------#

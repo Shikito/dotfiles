@@ -53,11 +53,23 @@
   hook_add = '''
    source ~/.config/nvim/plugins/nerdtree.vim
   '''
+  [[plugins]]
+  repo = 'jistr/vim-nerdtree-tabs'
+  hook_add = '''
+    source ~/.config/nvim/plugins/vim-nerdtree-tabs.vim
+  '''
   #-----end of NERDTree-----#
 
   [[plugins]]
   repo = 'tpope/vim-surround'
-  ###### markdown setting ######
+
+  [[plugins]]
+  repo = 'kassio/neoterm'
+  hook_add = '''
+    source ~/.config/nvim/plugins/neoterm.vim
+  '''
+
+  #--- markdown setting ----#
   [[plugins]]
   repo = 'plasticboy/vim-markdown'
   hook_add = '''
@@ -65,15 +77,16 @@
   '''
   [[plugins]]
   repo = 'kannokanno/previm'
-  ###############################
+  #-- end of markdown ----#
 
-  #---- Latex --------------#
+  #---- Latex ------------#
   [[plugins]]
   repo = 'lervag/vimtex'
   on_ft = ['tex']
   hook_add = '''
     source ~/.config/nvim/plugins/vimtex.vim
   '''
+  # ---- end of Latex ------#
   #-------------------------#
   #----Japanese Input ------#
   #-------------------------#

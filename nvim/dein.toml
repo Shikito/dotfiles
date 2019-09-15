@@ -69,6 +69,11 @@
     source ~/.config/nvim/plugins/neoterm.vim
   '''
 
+  [[plugins]]
+  repo = 'tomtom/tcomment_vim'
+  hook_add = '''
+    source ~/.config/nvim/plugins/tcomment_vim.vim
+  '''
   #--- markdown setting ----#
   [[plugins]]
   repo = 'plasticboy/vim-markdown'

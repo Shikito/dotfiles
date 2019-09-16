@@ -5,7 +5,7 @@
   [[plugins]]
   repo = 'tpope/vim-endwise'
 
-  # auto complemation for (, { and more.lh
+  # auto complemation for (, { and more
   [[plugins]]
   repo = 'Townk/vim-autoclose'
 
@@ -92,6 +92,16 @@
     source ~/.config/nvim/plugins/vimtex.vim
   '''
   # ---- end of Latex ------#
+
+  # ---- fzf --------------#
+  [[plugins]]
+  repo  = 'junegunn/fzf.vim'
+  depends = ['fzf']
+  hook_add = '''
+    source ~/.config/nvim/plugins/fzf.vim
+  '''
+  # ----- end of fzf -------#
+
   #-------------------------#
   #----Japanese Input ------#
   #-------------------------#

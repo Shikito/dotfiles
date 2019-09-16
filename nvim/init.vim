@@ -8,7 +8,8 @@ set hls
 "--- F3  : toggle abs num , rel num  ----"
 set number
 nnoremap <F3> :<C-u>setlocal relativenumber!<CR>
-
+"--- <ESC><ESC> : cancel highlight ------"
+nnoremap <ESC><ESC> :nohl<CR>
 "----- dein -------
 if &compatible
   set nocompatible

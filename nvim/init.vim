@@ -1,4 +1,3 @@
-set number
 set autoindent
 set tabstop=4
 set shiftwidth=4
@@ -6,6 +5,10 @@ set expandtab
 set splitright
 set clipboard=unnamed
 set hls
+"--- F3  : toggle abs num , rel num  ----"
+set number
+nnoremap <F3> :<C-u>setlocal relativenumber!<CR>
+
 "----- dein -------
 if &compatible
   set nocompatible

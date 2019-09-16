@@ -62,6 +62,27 @@ if has('syntax')
     augroup END
     call ZenkakuSpace()
 endif
+" 矢印キーでなら行内を動けるようにする
+nnoremap <Down> gj
+nnoremap <Up>   gk
+
+" 折り返されたところを見やすくする
+set showbreak=↪
+
+" インサートモードでのカーソル移動
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-h> <Left>
+inoremap <C-l> <Right>
+
+noremap あ a
+noremap い i
+noremap う u
+noremap え e
+noremap お o
+noremap っｄ dd
+noremap っｙ yy
+
 "----- the end of Japanese ---"
 "----- tab setting         ---"
 " https://qiita.com/wadako111/items/755e753677dd72d8036d

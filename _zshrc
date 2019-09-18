@@ -30,7 +30,11 @@ setopt inc_append_history
 PATH=/usr/bin:$PATH
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-source /opt/ros/melodic/setup.zsh
+ROS_SETUP="/opt/ros/melodic/setup.zsh"
+if [ -e $ROS_SETUP ]; then
+    source $ROS_SETUP
+fi
+
 ROS_PACKAGE_PATH="$HOME/catkin_ws/src":${ROS_PACKAGE_PATH}
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"

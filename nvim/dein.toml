@@ -47,6 +47,9 @@
   [[plugins]]
   repo = 'tpope/vim-repeat'
   
+  [[plugins]]
+  repo = 'vim-scripts/sudo.vim'
+
   #----NERDTree ------------#
   [[plugins]] 
   repo = 'scrooloose/nerdtree'

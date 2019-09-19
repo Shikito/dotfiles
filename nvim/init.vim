@@ -130,4 +130,4 @@ map <silent> [Tag]n :tabnext<CR>
 " tn 次のタブ
 map <silent> [Tag]p :tabprevious<CR>
 " tp 前のタブ
-"----- the end of tab setting-"
+" "----- the end of tab setting-"

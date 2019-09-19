@@ -10,15 +10,6 @@ zplugin light supercrabtree/k
 autoload -U compinit
 compinit
 
-# PROMPT  #
-autoload -U promptinit; promptinit
-PURE_CMD_MAX_EXEC_TIME=10
-zstyle :prompt:pure:path color blue :prompt:pure:git:branch color 242 :prompt:pure:git:arrow color cyan :prompt:pure:user color 242 @:prompt:pure:host color 242 :prompt:pure:execution_time color yellow
-zstyle :prompt:virtualenv color 242 ":prompt:pure:prompt:* "color cyan
-prompt pure
-###########
-
-
 # HISTORY #
 export HISTFILE=${HOME}/.zsh_history
 export HISTSIZE=1000

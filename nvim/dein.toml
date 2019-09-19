@@ -104,7 +104,12 @@
     source ~/.config/nvim/plugins/fzf.vim
   '''
   # ----- end of fzf -------#
-
+  # ----- status bar -------#
+  [[plugins]]
+  repo = 'vim-airline/vim-airline'
+  [[plugins]]
+  repo = 'vim-airline/vim-airline-themes'
+  # -----end of status bar -#
   #-------------------------#
   #----Japanese Input ------#
   #-------------------------#

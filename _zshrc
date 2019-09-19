@@ -10,6 +10,15 @@ zplugin light supercrabtree/k
 autoload -U compinit
 compinit
 
+# PROMPT  #
+autoload -U promptinit; promptinit
+PURE_CMD_MAX_EXEC_TIME=10
+zstyle :prompt:pure:path color blue :prompt:pure:git:branch color 242 :prompt:pure:git:arrow color cyan :prompt:pure:user color 242 @:prompt:pure:host color 242 :prompt:pure:execution_time color yellow
+zstyle :prompt:virtualenv color 242 ":prompt:pure:prompt:* "color cyan
+prompt pure
+###########
+
+
 # HISTORY #
 export HISTFILE=${HOME}/.zsh_history
 export HISTSIZE=1000
@@ -30,7 +39,11 @@ setopt inc_append_history
 PATH=/usr/bin:$PATH
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-source /opt/ros/melodic/setup.zsh
+ROS_SETUP="/opt/ros/melodic/setup.zsh"
+if [ -e $ROS_SETUP ]; then
+    source $ROS_SETUP
+fi
+
 ROS_PACKAGE_PATH="$HOME/catkin_ws/src":${ROS_PACKAGE_PATH}
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"

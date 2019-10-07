@@ -17,6 +17,9 @@
 
   [[plugins]]
   repo = 'w0rp/ale'
+  hook_add = '''
+    source ~/.config/nvim/plugins/ale.vim
+  '''
 
   # high light the lines that are chenged.
   [[plugins]]
@@ -111,5 +114,20 @@
   repo = 'vim-airline/vim-airline-themes'
   # -----end of status bar -#
   #-------------------------#
-  #----Japanese Input ------#
-  #-------------------------#
+  #----python---------------# 
+  [[plugins]]
+  repo = 'Shougo/deoplete.nvim'
+  [[plugins]]
+  repo = 'thinca/vim-quickrun'
+  hook_add = '''
+    source ~/.config/nvim/plugins/vim-quickrun.vim
+  '''
+  [[plugins]]
+  repo = 'jmcantrell/vim-virtualenv'
+  [[plugins]]
+  repo = 'Vimjas/vim-python-pep8-indent'
+  [[plugins]]
+  repo = 'davidhalter/jedi-vim'
+  hook_add = '''
+    source ~/.config/nvim/plugins/jedi-vim.vim
+  '''
